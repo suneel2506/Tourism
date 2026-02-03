@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Tamil Nadu - Plan your trip to ancient temples, beautiful beaches, hill stations, and experience vibrant festivals. Student-friendly travel recommendations.">
+  <meta name="keywords" content="Tamil Nadu tourism, India travel, temples, beaches, hill stations, festivals, Pongal, Madurai, Chennai, Ooty">
+  <title>Tamil Nadu Tourism - Discover the Soul of South India</title>
+  
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Skip Navigation for Accessibility -->
+  <a href="#main-content" class="skip-link" id="skip-link">Skip to main content</a>
+  
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="container header-content">
+      <div class="logo">
+        <span class="logo-icon">🏛️</span>
+        <div class="logo-text">
+          <h1 id="app-title">Tamil Nadu Tourism</h1>
+          <p id="app-tagline">Discover the Soul of South India</p>
+        </div>
+      </div>
+      
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active" id="nav-home">Home</a></li>
+          <li><a href="#places" class="nav-link" id="nav-places">Places</a></li>
+          <li><a href="#festivals" class="nav-link" id="nav-festivals">Festivals</a></li>
+          <li><a href="#plan" class="nav-link" id="nav-plan">Plan Trip</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header-actions">
+        <button class="lang-toggle" id="lang-toggle" aria-label="Switch language to Tamil">
+          <span class="lang-icon">🌐</span>
+          <span id="lang-text">தமிழ்</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="#home" class="mobile-nav-link" data-i18n="navHome">Home</a></li>
+      <li><a href="#places" class="mobile-nav-link" data-i18n="navPlaces">Places</a></li>
+      <li><a href="#festivals" class="mobile-nav-link" data-i18n="navFestivals">Festivals</a></li>
+      <li><a href="#plan" class="mobile-nav-link" data-i18n="navPlan">Plan Trip</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-bg">
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="container hero-content">
+        <h2 class="hero-title" id="hero-title">Explore Tamil Nadu</h2>
+        <p class="hero-subtitle" id="hero-subtitle">From ancient temples to pristine beaches, discover the magic of Tamil Nadu</p>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+          <div class="search-box" role="search">
+            <span class="search-icon">🔍</span>
+            <input 
+              type="search" 
+              id="search-input" 
+              class="search-input" 
+              placeholder="Search destinations, temples, beaches..."
+              aria-label="Search destinations"
+            >
+            <button class="search-btn" id="search-btn">Search</button>
+          </div>
+        </div>
+        
+        <a href="#places" class="hero-cta" id="hero-cta">Start Exploring</a>
+      </div>
+      
+      <!-- Feature Cards -->
+      <div class="features-strip">
+        <div class="container">
+          <div class="features-grid">
+            <div class="feature-card">
+              <span class="feature-icon">🛕</span>
+              <h3 id="feature1-title">Ancient Temples</h3>
+              <p id="feature1-desc">UNESCO World Heritage sites</p>
+            </div>
+            <div class="feature-card">
+              <span class="feature-icon">🏖️</span>
+              <h3 id="feature2-title">Beach Paradise</h3>
+              <p id="feature2-desc">Serene coastlines</p>
+            </div>
+            <div class="feature-card">
+              <span class="feature-icon">⛰️</span>
+              <h3 id="feature3-title">Hill Stations</h3>
+              <p id="feature3-desc">Cool mountain retreats</p>
+            </div>
+            <div class="feature-card">
+              <span class="feature-icon">🎭</span>
+              <h3 id="feature4-title">Cultural Heritage</h3>
+              <p id="feature4-desc">Rich traditions & festivals</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Best This Month Section -->
+    <section class="section best-month" id="best-month" aria-labelledby="best-month-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="best-month-title">
+            <span id="best-month-text">Best Places to Visit in</span>
+            <span class="month-highlight" id="current-month">February</span>
+          </h2>
+          <p class="section-subtitle" id="best-month-subtitle">Recommended destinations for this season</p>
+        </div>
+        <div class="places-carousel" id="best-month-places" role="list" aria-label="Best places this month">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Places Section -->
+    <section class="section places-section" id="places" aria-labelledby="places-title">
+      <div class="container">
+        <div class="places-layout">
+          <!-- Filters Sidebar -->
+          <aside class="filters-sidebar" id="filters-sidebar" role="complementary" aria-label="Filter places">
+            <div class="filters-header">
+              <h3 id="filter-title">Filters</h3>
+              <button class="filter-clear" id="filter-clear">Clear All</button>
+            </div>
+            
+            <!-- Category Filter -->
+            <div class="filter-group">
+              <h4 id="filter-categories">Categories</h4>
+              <div class="filter-options" id="category-filters" role="group" aria-labelledby="filter-categories">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+            
+            <!-- Budget Filter -->
+            <div class="filter-group">
+              <h4 id="filter-budget">Budget</h4>
+              <div class="filter-options" id="budget-filters" role="group" aria-labelledby="filter-budget">
+                <label class="filter-option">
+                  <input type="checkbox" value="budget" name="budget">
+                  <span class="filter-label">💰 Budget Friendly</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" value="mid-range" name="budget">
+                  <span class="filter-label">💵 Mid Range</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" value="premium" name="budget">
+                  <span class="filter-label">💎 Premium</span>
+                </label>
+              </div>
+            </div>
+            
+            <!-- Student Friendly Toggle -->
+            <div class="filter-group">
+              <label class="filter-option student-toggle">
+                <input type="checkbox" id="student-filter">
+                <span class="filter-label">🎓 <span id="student-label">Student Friendly</span></span>
+              </label>
+            </div>
+            
+            <button class="filter-apply-btn" id="filter-apply">Apply Filters</button>
+          </aside>
+          
+          <!-- Places Grid -->
+          <div class="places-main">
+            <div class="places-header">
+              <h2 class="section-title" id="places-title">Explore Destinations</h2>
+              <p class="results-count"><span id="results-count">20</span> <span id="results-text">places found</span></p>
+            </div>
+            <div class="places-grid" id="places-grid" role="list" aria-label="Places to visit">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Festivals Section -->
+    <section class="section festivals-section" id="festivals" aria-labelledby="festivals-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="festivals-title">Upcoming Festivals</h2>
+          <p class="section-subtitle" id="festivals-subtitle">Experience Tamil Nadu's vibrant culture</p>
+        </div>
+        <div class="festivals-grid" id="festivals-grid" role="list" aria-label="Upcoming festivals">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Plan Trip CTA Section -->
+    <section class="section plan-section" id="plan" aria-labelledby="plan-title">
+      <div class="container">
+        <div class="plan-card">
+          <div class="plan-content">
+            <h2 id="plan-title">Ready to Plan Your Trip?</h2>
+            <p id="plan-desc">Save your favorite places and create a personalized itinerary.</p>
+            <button class="plan-cta" id="plan-cta" disabled>
+              <span>🗓️</span> Coming Soon
+            </button>
+          </div>
+          <div class="plan-illustration">
+            <span class="plan-icon">🗺️</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-icon">🏛️</span>
+          <span id="footer-brand-name">Tamil Nadu Tourism</span>
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#" id="footer-about">About Us</a>
+          <a href="#" id="footer-contact">Contact</a>
+          <a href="#" id="footer-privacy">Privacy Policy</a>
+          <a href="#" id="footer-accessibility">Accessibility</a>
+        </nav>
+        <p class="footer-copyright" id="footer-copyright">© 2026 Tamil Nadu Tourism. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Loading Overlay -->
+  <div class="loading-overlay" id="loading-overlay" aria-hidden="true">
+    <div class="loading-spinner"></div>
+    <p id="loading-text">Loading places...</p>
+  </div>
+
+  <!-- Place Modal -->
+  <div class="modal" id="place-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">×</button>
+      <div class="modal-body" id="modal-body">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
